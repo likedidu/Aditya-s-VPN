@@ -1,6 +1,7 @@
 {
-    "server": "0.0.0.0",
+    "server":["::1", "127.0.0.1"],
     "server_port": "2333",
+    "local_port":1080,
     "password": "${PASSWORD}",
     "nameserver":"1.1.1.1",
     "timeout": 300,

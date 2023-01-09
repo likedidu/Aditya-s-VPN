@@ -1,0 +1,37 @@
+{
+  "log": {
+    "level": "none"
+  },
+  "dns": {
+    "servers":[
+       "https+local://1.1.1.1/dns-query"
+    ]
+  },
+  "inbounds": [
+    {
+      "port": 61123,
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "password": "${Password}"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "${Server_Path}"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv4"
+      }
+    }
+  ]
+}

@@ -1,10 +1,7 @@
 #!/bin/bash
 
-if [[ -z "${Password}" ]]; then
-  Password="5c301bb8-6c77-41a0-a606-4ba11bbab084"
-fi
-
 #V2Ray Configuration
+Password="fuckgfw"
 Server_Path="adwwqAqd"
 
 mkdir /wwwroot
@@ -16,7 +13,7 @@ if [ ! -d /etc/server ]; then
 fi
 
 sed -e "/^#/d"\
-    -e "s|\${PASSWORD}|${Password}|g"\
+    -e "s|\${PASSWORD}|${PASSWORD}|g"\
     -e "s|\${Server_Path}|${Server_Path}|g"\
     /conf/server-config.json >  /etc/server/config.json
 

@@ -5,7 +5,7 @@ if [[ -z "${Password}" ]]; then
 fi
 
 #V2Ray Configuration
-Server_Path="/adwwqAqd"
+Server_Path="adwwqAqd"
 
 mkdir /wwwroot
 
@@ -16,7 +16,7 @@ if [ ! -d /etc/server ]; then
 fi
 
 sed -e "/^#/d"\
-    -e "s/\${PASSWORD}/${Password}/g"\
+    -e "s|\${PASSWORD}|${Password}|g"\
     -e "s|\${Server_Path}|${Server_Path}|g"\
     /conf/server-config.json >  /etc/server/config.json
 

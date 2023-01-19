@@ -23,6 +23,8 @@ sed -e "/^#/d"\
     -e "$s"\
     /conf/nginx.conf > /etc/nginx/conf.d/ss.conf 
 
+cat /etc/nginx/conf.d/ss.conf 
+
 v2-server run -c /etc/server/config.json &
 
 rm -rf /etc/nginx/sites-enabled/default

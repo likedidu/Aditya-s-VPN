@@ -22,7 +22,7 @@
       "streamSettings": {
         "network": "grpc",
         "grpcSettings": {
-          "serviceName": "${Server_Path}"
+          "serviceName": "${SERVER_PATH}"
         }
       }
     }

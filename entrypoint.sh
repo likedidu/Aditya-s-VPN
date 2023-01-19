@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#V2Ray Configuration
-Password="fuckgfw"
-Server_Path="adwwqAqd"
-
 mkdir /wwwroot
 
 mv /v2-server /usr/bin/v2-server

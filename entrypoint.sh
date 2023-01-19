@@ -10,7 +10,7 @@ fi
 
 sed -e "/^#/d"\
     -e "s|\${PASSWORD}|${PASSWORD}|g"\
-    -e "s|\${Server_Path}|${Server_Path}|g"\
+    -e "s|\${SERVER_PATH}|${SERVER_PATH}|g"\
     /conf/server-config.json >  /etc/server/config.json
 
 echo /etc/server/config.json
@@ -19,7 +19,7 @@ cat /etc/server/config.json
 
 sed -e "/^#/d"\
     -e "s/\${PORT}/${PORT}/g"\
-    -e "s|\${Server_Path}|${Server_Path}|g"\
+    -e "s|\${SERVER_PATH}|${SERVER_PATH}|g"\
     -e "$s"\
     /conf/nginx.conf > /etc/nginx/conf.d/ss.conf 
 
